@@ -35,12 +35,16 @@ services:
       - "5000:5000"
 EOL
 
-echo "docker-compose.yml has been generated successfully."
+echo "Docker build up"
 
 
 docker compose up -d
 
+echo "Docker run bash"
+
 docker exec -it bitcoind /bin/bash
+
+echo "bitcoin cli create wallet"
 
 bitcoin-cli -testnet4 -rpcuser=$username -rpcpassword=$password -rpcport=5000 createwallet $wallet
 
