@@ -5,7 +5,7 @@
 # Display HenryRnode with asterisks in a multiline pattern
 echo "****************************************"
 echo "*                                      *"
-echo "*             HenryRnodes              *"
+echo "*             Henryrnodes              *"
 echo "*                                      *"
 echo "****************************************"
 
