@@ -1,14 +1,6 @@
 #!/bin/bash
-
-
-echo "Cloning Rainbowprotocol repository..."
-
-cd $HOME 
-mkdir Rainbowprotocol
-git clone https://github.com/rainbowprotocol-xyz/btc_testnet4
-cd btc_testnet4
-
-#!/bin/bash
+cd $HOME
+rm rainbow.sh
 
 # Prompt user for input
 read -p "Enter your username: " username
@@ -18,7 +10,7 @@ read -p "Enter your walletName: " walletname
 
 # Check if jq is needed or not (can be used for further processing)
 # Here, we are just outputting the variables to show how you could use jq
-#echo "{\"username\": \"$username\", \"password\": \"$password\", \"walletname\": \"$walletname\"}" | jq .
+echo "{\"username\": \"$username\", \"password\": \"$password\", \"walletname\": \"$walletname\"}" | jq .
 
 # Generate docker-compose.yml with the provided input
 cat > docker-compose.yml <<EOL
@@ -40,7 +32,7 @@ EOL
 echo "docker-compose.yml has been generated successfully."
 
 
-docker-compose up -d
+docker compose up -d
 
 docker exec -it bitcoind /bin/bash
 
