@@ -1,9 +1,10 @@
 #!/bin/bash
 cd $HOME
 rm rainbow.sh
-rm -r rainbow
 
-mkdir rainbow
+mkdir rainbown
+
+cd rainbown
 
 git clone https://github.com/rainbowprotocol-xyz/btc_testnet4
 cd btc_testnet4
