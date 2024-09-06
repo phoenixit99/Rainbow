@@ -1,7 +1,7 @@
 #!/bin/bash
 cd $HOME
 rm rainbow.sh
-
+rm -r btc_testnet4
 # Prompt user for input
 read -p "Enter your username: " username
 read -s -p "Enter your password: " password
