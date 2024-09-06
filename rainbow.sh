@@ -1,5 +1,16 @@
 #!/bin/bash
 
+#!/bin/bash
+
+# Display HenryRnode with asterisks in a multiline pattern
+echo "****************************************"
+echo "*                                      *"
+echo "*             HenryRnodes              *"
+echo "*                                      *"
+echo "****************************************"
+
+set -e  # Exit script on error
+
 set -e  # Exit script on error
 
 # Setup directory and clean up any previous run
