@@ -82,6 +82,6 @@ chmod +x rbo_worker
 
 # Start the RBO worker
 echo "Starting RBO worker..."
-./rbo_worker worker --rpc http://127.0.0.1:5000 --password $password --username $username --start_height 42000
+./rbo_worker worker --rpc $bitcoin_core_endpoint --password $password --username $username --start_height 42000
 
 echo "Script completed successfully."
