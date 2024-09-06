@@ -18,7 +18,7 @@ read -p "Enter your walletName: " walletname
 
 # Check if jq is needed or not (can be used for further processing)
 # Here, we are just outputting the variables to show how you could use jq
-echo "{\"username\": \"$username\", \"password\": \"$password\", \"walletname\": \"$walletname\"}" | jq .
+#echo "{\"username\": \"$username\", \"password\": \"$password\", \"walletname\": \"$walletname\"}" | jq .
 
 # Generate docker-compose.yml with the provided input
 cat > docker-compose.yml <<EOL
@@ -38,7 +38,6 @@ services:
 EOL
 
 echo "docker-compose.yml has been generated successfully."
-EOL
 
 
 docker-compose up -d
