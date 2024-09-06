@@ -63,9 +63,20 @@ docker exec -it bitcoind /bin/bash -c "
   bitcoin-cli -testnet4 -rpcuser=$username -rpcpassword=$password -rpcport=5000 createwallet $walletname
 "
 
-# Download and run the upgrade script (if necessary)
-echo "Connect Bitcoin Core and Run Indexert..."
 # Your upgrade or indexer script goes here
 
-echo "Script completed successfully."
 exit
+
+# Download and run the upgrade script (if necessary)
+echo "Connect Bitcoin Core and Run Indexert..."
+
+git clone https://github.com/rainbowprotocol-xyz/rbo_indexer_testnet.git && cd rbo_indexer_testnet
+wget https://github.com/rainbowprotocol-xyz/rbo_indexer_testnet/releases/download/v0.0.1-alpha/rbo_worker
+chmod +x rbo_worker
+
+./rbo_worker worker --rpc {bitcoin_core_endpoint} --password $password --username $username --start_height 42000
+
+
+echo "Script completed successfully."
+
+
