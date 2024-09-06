@@ -8,13 +8,19 @@ mkdir Rainbowprotocol
 git clone https://github.com/rainbowprotocol-xyz/btc_testnet4
 cd btc_testnet4
 
-# Prompt user for username and password
+#!/bin/bash
+
+# Prompt user for input
 read -p "Enter your username: " username
-read -p "Enter your password: " password
+read -s -p "Enter your password: " password
+echo ""
 read -p "Enter your walletName: " walletname
 
-jq --arg username "$username" --arg password "$password" --arg wallet "$walletname" 
+# Check if jq is needed or not (can be used for further processing)
+# Here, we are just outputting the variables to show how you could use jq
+echo "{\"username\": \"$username\", \"password\": \"$password\", \"walletname\": \"$walletname\"}" | jq .
 
+# Generate docker-compose.yml with the provided input
 cat > docker-compose.yml <<EOL
 version: '3'
 services:
@@ -24,11 +30,14 @@ services:
     container_name: bitcoind
     volumes:
       - /root/project/run_btc_testnet4/data:/root/.bitcoin/
-    command: ["bitcoind", "-testnet4", "-server","-txindex", "-rpcuser=$username", "-rpcpassword=$password", "-rpcallowip=0.0.0.0/0", "-rpcbind=0.0.0.0:5000"]
+    command: ["bitcoind", "-testnet4", "-server", "-txindex", "-rpcuser=$username", "-rpcpassword=$password", "-rpcallowip=0.0.0.0/0", "-rpcbind=0.0.0.0:5000"]
     ports:
       - "8333:8333"
       - "48332:48332"
       - "5000:5000"
+EOL
+
+echo "docker-compose.yml has been generated successfully."
 EOL
 
 
