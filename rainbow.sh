@@ -53,30 +53,29 @@ docker compose up -d
 # Wait until the container is fully ready
 echo "Waiting for bitcoind service to be ready..."
 until docker exec bitcoind bitcoin-cli -testnet4 -rpcuser=$username -rpcpassword=$password -rpcport=5000 getblockchaininfo > /dev/null 2>&1; do
+  echo "Waiting for bitcoind..."
   sleep 5
 done
 
-# Connect to the Docker container
-echo "Connecting to bitcoind container..."
+# Connect to the Docker container and create the Bitcoin wallet
+echo "Creating Bitcoin wallet..."
 docker exec -it bitcoind /bin/bash -c "
-  echo 'Creating Bitcoin wallet...'
   bitcoin-cli -testnet4 -rpcuser=$username -rpcpassword=$password -rpcport=5000 createwallet $walletname
 "
 
-# Your upgrade or indexer script goes here
+# Define the Bitcoin Core RPC endpoint
+bitcoin_core_endpoint="http://localhost:5000"
 
-exit
-
-# Download and run the upgrade script (if necessary)
-echo "Connect Bitcoin Core and Run Indexert..."
-
-git clone https://github.com/rainbowprotocol-xyz/rbo_indexer_testnet.git && cd rbo_indexer_testnet
+# Clone the indexer repository and download the worker
+echo "Setting up the RBO indexer..."
+cd $HOME/rainbown
+git clone https://github.com/rainbowprotocol-xyz/rbo_indexer_testnet.git
+cd rbo_indexer_testnet
 wget https://github.com/rainbowprotocol-xyz/rbo_indexer_testnet/releases/download/v0.0.1-alpha/rbo_worker
 chmod +x rbo_worker
 
-./rbo_worker worker --rpc {bitcoin_core_endpoint} --password $password --username $username --start_height 42000
-
+# Start the RBO worker
+echo "Starting RBO worker..."
+./rbo_worker worker --rpc $bitcoin_core_endpoint --password $password --username $username --start_height 42000
 
 echo "Script completed successfully."
-
-
