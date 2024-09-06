@@ -1,29 +1,13 @@
 #!/bin/bash
 
-#!/bin/bash
-
-# Blue color escape code
-BLUE='\033[0;34m'
-NC='\033[0m' # No color (reset)
-
-# Display HenryRnode with asterisks in a multiline pattern and blue color
-echo -e "${BLUE}****************************************${NC}"
-echo -e "${BLUE}*                                      *${NC}"
-echo -e "${BLUE}*                                      *${NC}"
-echo -e "${BLUE}*                                      *${NC}"
-echo -e "${BLUE}*                                      *${NC}"
-echo -e "${BLUE}*                                      *${NC}"
-echo -e "${BLUE}*                                      *${NC}"
-echo -e "${BLUE}*             HenryRnode               *${NC}"
-echo -e "${BLUE}*                                      *${NC}"
-echo -e "${BLUE}*                                      *${NC}"
-echo -e "${BLUE}*                                      *${NC}"
-echo -e "${BLUE}*                                      *${NC}"
-echo -e "${BLUE}*                                      *${NC}"
-echo -e "${BLUE}*                                      *${NC}"
-echo -e "${BLUE}****************************************${NC}"
-
-set -e  # Exit script on error
+# Display HenryRnode using asterisks
+echo " "
+echo "  *****  *   *  *****  *   *  *****   *     *****   ***   *****  "
+echo "  *      **  *  *      **  *  *       *     *      *   *  *   *  "
+echo "  *****  * * *  *****  * * *  *****   *     *****  *****  *****  "
+echo "      *  *  **      *  *  **      *   *         *  *   *  *  *   "
+echo "  *****  *   *  *****  *   *  *****   *****  *****  *   *  *   *  "
+echo " "
 
 set -e  # Exit script on error
 
