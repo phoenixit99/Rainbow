@@ -1,4 +1,6 @@
-# Rainbow Protocol
+# Rainbow Protocol 
+
+Docs (https://github.com/rainbowprotocol-xyz)
 
 ## Introduction
 Rainbow Protocol is committed to providing effective incentives for both the indexing and validation layers. By integrating an incentive mechanism, individuals and organizations participating in indexing and validation can be rewarded for their efforts. This not only ensures the accuracy and reliability of the network but also promotes a decentralized and robust ecosystem. Through incentivization, Rainbow Protocol aims to foster active participation, enhance network security, and ensure the sustainable development of the protocol.
