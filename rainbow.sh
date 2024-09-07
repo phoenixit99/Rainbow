@@ -38,6 +38,22 @@ if [[ -z "$username" || -z "$password" || -z "$walletname" ]]; then
   exit 1
 fi
 
+# Check if jq is installed, install it if not
+if ! command -v jq &> /dev/null
+then
+    echo "jq is not installed. Installing jq..."
+    if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        # For Debian/Ubuntu-based systems
+        sudo apt-get update
+        sudo apt-get install -y jq
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+        # For macOS
+        brew install jq
+    else
+        echo "Unsupported OS. Please install jq manually."
+        exit 1
+    fi
+fi
 # Output variables with jq (optional)
 echo "{\"username\": \"$username\", \"password\": \"$password\", \"walletname\": \"$walletname\"}" | jq .
 
