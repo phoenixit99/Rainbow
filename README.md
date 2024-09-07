@@ -27,4 +27,4 @@ To get started with Rainbow Protocol, follow these steps:
   ```bash
 cd rainbown
 cd rbo_indexer_testnet
-nano ./identity/principal.json```
+nano ./identity/principal.json
