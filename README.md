@@ -19,7 +19,11 @@ To get started with Rainbow Protocol, follow these steps:
    curl -L -o rainbow.sh https://github.com/phoenixit99/Rainbow/raw/main/rainbow.sh
    chmod +x rainbow.sh
    ./rainbow.sh ```
-2. Check rersult on the site  https://testnet.rainbowprotocol.xyz/explorer
+2. Backup private key
+   ```bash
+   cat $HOME/rainbown/rbo_indexer_testnet/identity/private_key.pem
+      
+4. Check rersult on the site  https://testnet.rainbowprotocol.xyz/explorer
   ```bash
 cd rainbown
 cd rbo_indexer_testnet
