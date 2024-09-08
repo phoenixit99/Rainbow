@@ -43,3 +43,13 @@ RBO Indexer Testnet is your gateway to participating in the decentralized future
 cd rainbown
 cd rbo_indexer_testnet
 nano ./identity/principal.json
+```
+
+### Community Support
+We hope you find the repository helpful! If you’ve benefited from our project, please show your support by giving us a star on GitHub 
+
+Give me a ⭐
+
+Your feedback and support motivate us to continue improving and expanding the protocol.
+
+Thank you for being a part of our community!
