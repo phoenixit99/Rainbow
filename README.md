@@ -33,7 +33,7 @@ RBO Indexer Testnet is your gateway to participating in the decentralized future
    cd $HOME
    curl -L -o rainbow.sh https://github.com/phoenixit99/Rainbow/raw/main/rainbow.sh
    chmod +x rainbow.sh
-   ./rainbow.sh 
+   ./rainbow.sh   
 2. Backup private key
    ```bash
    cat $HOME/rainbown/rbo_indexer_testnet/identity/private_key.pem
@@ -44,7 +44,11 @@ cd rainbown
 cd rbo_indexer_testnet
 nano ./identity/principal.json
 ```
-
+5. Restart the RBO indexer Testnet
+   Note: Navigate to folder rbo_indexer_testnet, replace username and password to your config
+```bash
+ ./rbo_worker worker --rpc http://localhost:5000 --password $password --username $username --start_height 42000   
+```
 ### Community Support
 We hope you find the repository helpful! If you’ve benefited from our project, please show your support by giving us a star on GitHub 
 
