@@ -44,7 +44,8 @@ cd rainbown
 cd rbo_indexer_testnet
 nano ./identity/principal.json
 ```
-5. Restart the RBO indexer Testnet
+5. Restart the RBO indexer Testnet </br>
+
    Note: Navigate to folder rbo_indexer_testnet, replace username and password to your config
 ```bash
  ./rbo_worker worker --rpc http://localhost:5000 --password $password --username $username --start_height 42000   
