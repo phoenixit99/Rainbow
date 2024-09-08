@@ -1,5 +1,7 @@
 # Rainbow Protocol 
 
+![]([https://github.com/username/repositoryname/blob/main/images/myimage.png?raw=true](https://github.com/phoenixit99/Rainbow/blob/main/Screenshot%202024-09-08%20at%207.56.20%E2%80%AFAM.png))
+
 Docs (https://github.com/rainbowprotocol-xyz)
 
 ## Introduction
