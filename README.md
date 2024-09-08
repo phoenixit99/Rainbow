@@ -33,7 +33,7 @@ RBO Indexer Testnet is your gateway to participating in the decentralized future
    cd $HOME
    curl -L -o rainbow.sh https://github.com/phoenixit99/Rainbow/raw/main/rainbow.sh
    chmod +x rainbow.sh
-   ./rainbow.sh ```
+   ./rainbow.sh 
 2. Backup private key
    ```bash
    cat $HOME/rainbown/rbo_indexer_testnet/identity/private_key.pem
