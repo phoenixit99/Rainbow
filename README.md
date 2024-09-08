@@ -16,8 +16,18 @@ Decentralized indexers play a crucial role in identifying and parsing transactio
 - **Decentralized Indexing**: Allows users to run their own indexers.
 - **Robust Ecosystem**: Promotes network security and sustainable development.
 
-## Getting Started
-To get started with Rainbow Protocol, follow these steps:
+## Getting Started with Rainbow Protocol
+### Manual Install
+1. Run bitcoin for testnet4 at https://github.com/rainbowprotocol-xyz/btc_testnet4 
+2. Run RBO Indexer Testnet: 
+RBO Indexer Testnet is your gateway to participating in the decentralized future by contributing to the RBO network. By running this application, you can:
+
+🛠️ Generate RBO Transaction Blocks on top of Bitcoin
+✅ Submit Blockheaders and hashes for validation
+💰 Help expand the network and earn rewards (after Mainnet launch)
+ at https://github.com/rainbowprotocol-xyz/rbo_indexer_testnet 
+
+### Auto Install
 1. Clone the repository and auto run:
    ```bash
    cd $HOME
