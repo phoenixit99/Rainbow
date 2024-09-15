@@ -16,8 +16,8 @@ EOF
 set -e
 
 # Setup directory and clean up any previous run
-cd "$HOME"
-rm -f rainbow.sh
+# cd "$HOME"
+# rm -f rainbow.sh
 mkdir -p rainbown
 cd rainbown
 
