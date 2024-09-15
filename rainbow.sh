@@ -28,6 +28,7 @@ if [ ! -d "btc_testnet4" ]; then
 elif
   inital_setup=1
 fi
+
 cd btc_testnet4
 
 # Prompt user for input
@@ -113,8 +114,7 @@ cd $HOME/rainbown
 if [ ! -d "rbo_indexer_testnet" ]; then
   echo "Clone the rbo..."
   git clone https://github.com/rainbowprotocol-xyz/rbo_indexer_testnet.git && cd rbo_indexer_testnet
-fi
-else 
+elif 
   echo "pull the rbo..."
   git pull https://github.com/rainbowprotocol-xyz/rbo_indexer_testnet.git && cd rbo_indexer_testnet
 fi
