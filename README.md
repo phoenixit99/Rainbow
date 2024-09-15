@@ -1,5 +1,8 @@
 # Rainbow Protocol 
 
+<img height="100" alt="logo" src="https://github.com/phoenixit99/Rainbow/blob/main/Screenshot%202024-09-08%20at%207.56.20%E2%80%AFAM.png">
+
+
 Docs (https://github.com/rainbowprotocol-xyz)
 
 ## Introduction
@@ -13,14 +16,24 @@ Decentralized indexers play a crucial role in identifying and parsing transactio
 - **Decentralized Indexing**: Allows users to run their own indexers.
 - **Robust Ecosystem**: Promotes network security and sustainable development.
 
-## Getting Started
-To get started with Rainbow Protocol, follow these steps:
+## Getting Started with Rainbow Protocol
+### Manual Install
+1. Run bitcoin for testnet4 at https://github.com/rainbowprotocol-xyz/btc_testnet4 
+2. Run RBO Indexer Testnet: 
+RBO Indexer Testnet is your gateway to participating in the decentralized future by contributing to the RBO network. By running this application, you can:
+
+🛠️ Generate RBO Transaction Blocks on top of Bitcoin
+✅ Submit Blockheaders and hashes for validation
+💰 Help expand the network and earn rewards (after Mainnet launch)
+ at https://github.com/rainbowprotocol-xyz/rbo_indexer_testnet 
+
+### Auto Install
 1. Clone the repository and auto run:
    ```bash
    cd $HOME
    curl -L -o rainbow.sh https://github.com/phoenixit99/Rainbow/raw/main/rainbow.sh
    chmod +x rainbow.sh
-   ./rainbow.sh ```
+   ./rainbow.sh   
 2. Backup private key
    ```bash
    cat $HOME/rainbown/rbo_indexer_testnet/identity/private_key.pem
@@ -30,3 +43,18 @@ To get started with Rainbow Protocol, follow these steps:
 cd rainbown
 cd rbo_indexer_testnet
 nano ./identity/principal.json
+```
+5. Restart the RBO indexer Testnet </br>
+
+   Note: Navigate to folder rbo_indexer_testnet, replace username and password to your config
+```bash
+ ./rbo_worker worker --rpc http://localhost:5000 --password $password --username $username --start_height 42000   
+```
+### Community Support
+We hope you find the repository helpful! If you’ve benefited from our project, please show your support by giving us a star on GitHub 
+
+Give me a ⭐
+
+Your feedback and support motivate us to continue improving and expanding the protocol.
+
+Thank you for being a part of our community!
