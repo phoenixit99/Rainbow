@@ -25,7 +25,7 @@ cd rainbown
 if [ ! -d "btc_testnet4" ]; then
   inital_setup=0
   git clone https://github.com/rainbowprotocol-xyz/btc_testnet4
-elif
+else
   inital_setup=1
 fi
 
@@ -114,7 +114,7 @@ cd $HOME/rainbown
 if [ ! -d "rbo_indexer_testnet" ]; then
   echo "Clone the rbo..."
   git clone https://github.com/rainbowprotocol-xyz/rbo_indexer_testnet.git && cd rbo_indexer_testnet
-elif 
+else 
   echo "pull the rbo..."
   git pull https://github.com/rainbowprotocol-xyz/rbo_indexer_testnet.git && cd rbo_indexer_testnet
 fi
