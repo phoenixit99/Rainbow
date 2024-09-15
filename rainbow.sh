@@ -20,13 +20,21 @@ rm -f rainbow.sh
 mkdir -p rainbown
 cd rainbown
 
+inital_setup = 1
 # Clone the repository
 if [ ! -d "btc_testnet4" ]; then
+  inital_setup = 0
   git clone https://github.com/rainbowprotocol-xyz/btc_testnet4
 fi
 cd btc_testnet4
 
 # Prompt user for input
+if [ "$initial_setup" -eq 0 ]; then
+  echo "{\"The Rainbow prepare for setup\"}" | jq .
+elif 
+  echo "{\"The Rainbow already setup, Should prepare for update\"}" | jq .
+fi
+
 read -p "Enter your username: " username
 read -s -p "Enter your password: " password
 echo ""
@@ -57,6 +65,7 @@ fi
 # Output variables with jq (optional)
 echo "{\"username\": \"$username\", \"password\": \"$password\", \"walletname\": \"$walletname\"}" | jq .
 
+if [ "$initial_setup" -eq 0 ]; then
 # Generate docker-compose.yml with the provided input
 cat > docker-compose.yml <<EOL
 version: '3'
@@ -90,6 +99,7 @@ echo "Creating Bitcoin wallet..."
 docker exec -it bitcoind /bin/bash -c "
   bitcoin-cli -testnet4 -rpcuser=$username -rpcpassword=$password -rpcport=5000 createwallet $walletname
 "
+fi
 
 # Define the Bitcoin Core RPC endpoint
 bitcoin_core_endpoint="http://localhost:5000"
@@ -113,7 +123,6 @@ cp rbo_worker-linux-amd64-0.0.2-20240914-4ec80a8/rbo_worker rbo_worker
 rm -r rbo_worker-linux-amd64-0.0.2-20240914-4ec80a8
 
 chmod +x rbo_worker
-
 
 
 
