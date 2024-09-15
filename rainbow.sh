@@ -20,11 +20,13 @@ rm -f rainbow.sh
 mkdir -p rainbown
 cd rainbown
 
-$inital_setup=1
+
 # Clone the repository
 if [ ! -d "btc_testnet4" ]; then
-  $inital_setup=0
+  inital_setup=0
   git clone https://github.com/rainbowprotocol-xyz/btc_testnet4
+elif
+  inital_setup=1
 fi
 cd btc_testnet4
 
