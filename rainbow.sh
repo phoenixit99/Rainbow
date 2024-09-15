@@ -1,19 +1,19 @@
 #!/bin/bash
 
 # Welcome message with ASCII art
-clear
-cat << "EOF"
+# clear
+# cat << "EOF"
                                                                     
-  H   H  EEEEE  N   N  RRRR   Y    Y     N   N  OOO   DDDD   EEEEE 
-  H   H  E      NN  N  R   R    Y Y      NN  N O   O  D   D  E     
-  HHHHH  EEEE   N N N  RRRR      Y       N N N O   O  D   D  EEEE  
-  H   H  E      N  NN  R  R      Y       N  NN O   O  D   D  E     
-  H   H  EEEEE  N   N  R   R     Y       N   N  OOO   DDDD   EEEEE 
+#   H   H  EEEEE  N   N  RRRR   Y    Y     N   N  OOO   DDDD   EEEEE 
+#   H   H  E      NN  N  R   R    Y Y      NN  N O   O  D   D  E     
+#   HHHHH  EEEE   N N N  RRRR      Y       N N N O   O  D   D  EEEE  
+#   H   H  E      N  NN  R  R      Y       N  NN O   O  D   D  E     
+#   H   H  EEEEE  N   N  R   R     Y       N   N  OOO   DDDD   EEEEE 
                                                                     
-EOF
+# EOF
 
-# Exit script on error
-set -e
+# # Exit script on error
+# set -e
 
 # Setup directory and clean up any previous run
 # cd "$HOME"
