@@ -50,6 +50,14 @@ nano ./identity/principal.json
 ```bash
  ./rbo_worker worker --rpc http://localhost:5000 --password $password --username $username --start_height 42000   
 ```
+### Update the latest version 
+
+```
+curl -L -o rainbow_update.sh https://github.com/phoenixit99/rbo_crontab/raw/main/rainbow_update.sh
+chmod +x rainbow_update.sh
+./rainbow_update.sh
+```
+
 ### Community Support
 We hope you find the repository helpful! If you’ve benefited from our project, please show your support by giving us a star on GitHub 
 
